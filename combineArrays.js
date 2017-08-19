@@ -14,7 +14,7 @@ const array2 = ['world', 'Is', 'my', 'Hello', 'Della'];
 
 const combineArraysThenSort = (arr1, arr2) => []
   .concat(arr1, arr2)
-  .map((str) => str.toLowerCase())
+  .map((str) => (str.toLowerCase()).charAt(0).toUpperCase() + str.slice(1))
   .filter((str, index, array) => array.indexOf(str) === index)
   .sort((a, b) => a.length - b.length);
 
